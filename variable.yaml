@@ -5,13 +5,13 @@
    x: 50
    my_name: "ismail"
   vars_prompt:
-   name: y
-   prompt: Enter the y value is
-   private: no
+  - name: user_name
+    prompt: Enter your name
+    private: no
+  - name: password
+    prompt: Enter your password
+    private: yes
   gather_facts: false
   tasks:
   - debug:
-     msg:
-     - "The x value is: {{x}}"
-     - "My name is : {{my_name}}"
-     - "The value of y is : {{y}}"
+     msg: "Ther username is {{user_name}} and password is {{password}}"

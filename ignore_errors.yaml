@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - command: "ls /home/ansadmin/playbooks/ansible_playbooks_examples/tomcat7"
+      register: tomcat7_out
+      ignore_errors: yes
+    - debug: var=tomcat7_out
+    - command: "ls /home/ansadmin/playbooks/ansible_playbooks_examples/tomcat10"
+      register: tomcat10_out
+      ignore_errors: yes
+    - debug: var=tomcat10_out
+    - command: "ls /home/ansadmin/playbooks/ansible_playbooks_examples/tomcat8"
+      register: tomcat8_out
+       ignore_errors: yes
+    - debug: var=tomcat8_out
+    - command: "ls /home/ansadmin/playbooks/ansible_playbooks_examples/tomcat9"
+      register: tomcat9_out
+      ignore_errors: yes
+    - debug: var=tomcat9_out
+

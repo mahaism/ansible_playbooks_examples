@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  become: true
+  gather_facts: false
+  tasks:
+  - name: checking service status
+    shell: "ping www.gmail.com"
+    register: top_up

@@ -1,3 +1,4 @@
+# read variable value while playing playbook
 ---
 - hosts: localhost
   vars:

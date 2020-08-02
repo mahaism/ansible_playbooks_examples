@@ -20,3 +20,4 @@ ansible-playbook cmd_line.yaml --extra-var x=50
   413  ansible-playbook cmd_line.yaml -e "{ 'x': 200}"
        ansible-playbook multiple_vars.yaml -e "x=20 y=30"
        ansible-playbook multiple_vars.yaml -e "{ 'x':566, 'y':666 }"
+       ansible-playbook multiple_vars.yaml -e "x=10 y='This is sample code'"

@@ -1,0 +1,23 @@
+Command line arguiments are useful to pass variables from commandline.
+we can pass different types of variables in differentformants:
+> scalar
+> sequence
+> Map
+> Files with variables
+
+
+command line arguments as a scalar
+If we want to define variable in playbook we can do as 
+x: 34
+
+or if we want to pass variable while executing playbook from command liine
+>> ansible-playbook cmd_line.yaml --extra-var "x=34"
+
+passing variables in cmd line
+ansible-playbook cmd_line.yaml --extra-var x=50
+  410  ansible-playbook cmd_line.yaml --extra-var "x=500"
+  411  ansible-playbook cmd_line.yaml --e "x=5000"
+  413  ansible-playbook cmd_line.yaml -e "{ 'x': 200}"
+       ansible-playbook multiple_vars.yaml -e "x=20 y=30"
+       ansible-playbook multiple_vars.yaml -e "{ 'x':566, 'y':666 }"
+       ansible-playbook multiple_vars.yaml -e "x=10 y='This is sample code'"

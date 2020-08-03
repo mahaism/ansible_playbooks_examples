@@ -1,3 +1,4 @@
+---
 - name: Installing webserver on Redhat
   yum:
     name: httpd

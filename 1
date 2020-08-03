@@ -1,0 +1,10 @@
+---
+- name: Installing java on Debian
+  hosts: nodes
+  become: yes
+  tasks:
+    - name: Installing java on debian
+      yum:
+        name: java
+        state: present
+

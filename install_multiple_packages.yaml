@@ -1,0 +1,23 @@
+---
+- name: simple play to install multiple packages
+  hosts: nodes
+  become: yes
+  tasks:
+    - name: Installing webserver on Redhat family
+      yum:
+        name: httpd
+        state: present
+      when: ansible_os_family=="RedHat"
+
+    - name: Installing webserver on ubuntu
+      apt:
+        name: apache2
+        state: present
+      when: ansible_os_family=="Ubuntu"
+
+    - name: Installing java on Debian os family
+      yum:
+        name: java-1.8.0-openjdk
+        state: present
+      when: ansible-os_family=="Debian"
+      ignore_errors: yes

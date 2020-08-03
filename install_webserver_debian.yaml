@@ -1,0 +1,4 @@
+- name: Installing webserver o Debian
+  yum:
+    name: httpd
+    state: present
